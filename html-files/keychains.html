@@ -116,6 +116,13 @@ fetch('../json-files/keychains.json')
         badge.textContent = 'Bestseller';
       }
 
+      let mark = null;
+      if (item.new) {
+        mark = document.createElement('div');
+        mark.className = 'new-arrival';
+        mark.textContent = 'New Arrival';
+      }
+
       // Picture element: WebP + fallback
       const picture = document.createElement('picture');
 
