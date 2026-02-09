@@ -4,11 +4,36 @@
   box-sizing: border-box;
 }
 
+/* Preventing dragging images in CSS */
+img { 
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
 body {
     margin: 0;
     padding-top: 140px;
     background-color: #f5efe1;
     font-family: Bahnschrift;
+}
+
+.note-footer {
+  position: relative;
+  bottom: 2vh;
+  left: 50%;
+  margin-bottom: 35px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.footer-text {
+  font-style: italic;
 }
 
 @media (max-width: 575px) {
