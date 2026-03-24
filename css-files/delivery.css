@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .delivery-bar {
     margin-top: -40px;
     font-size: 26.56px;
@@ -13,12 +12,35 @@
     position: fixed;
     left: 0;
     right: 0;
+    overflow: hidden;
+    white-space: nowrap;
 
     z-index: 100;
 }
 
 .delivery-bar a {
     color: #ede8d8
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%; /* for starting off-screen */
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 804px) {
+  .scroll-text {
+  animation: scroll-left 19s linear infinite;
+}
 }
 
 @media (max-width: 575px) {
@@ -43,10 +65,4 @@
     .delivery-bar {
         font-size: 12px;
     }
-}
-
-@media (max-width: 321px) {
-/* .delivery-bar {
-    margin-top: 45px;
-} */
 }
