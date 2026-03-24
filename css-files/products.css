@@ -14,7 +14,7 @@
 }
 
 /* Responsiveness and compatibility for smaller screens for tap overlay begins at line 538 */
-.tap-overlay {
+.tap-overlay, .tap-overlay-home {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -28,12 +28,12 @@
   transition: opacity 0.5s ease;
 }
 
-.tap-overlay.show {
+.tap-overlay.show, .tap-overlay-home.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.tap-message {
+.tap-message, .tap-message-home {
   background: transparent; /* no white box */
   padding: 0; /* remove box padding */
   text-align: center;
@@ -41,13 +41,13 @@
   animation: fadeHint 3s ease forwards;
 }
 
-.tap-message img {
+.tap-message img, .tap-message-home img {
   width: 80px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.tap-message p {
+.tap-message p, .tap-message-home p {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
