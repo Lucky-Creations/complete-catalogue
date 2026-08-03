@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // Detects current page
     const path = window.location.pathname;
 
-    if (path.endsWith("index.html") || path === "/complete-catalogue/") {
+    if (path.endsWith("index.html") || path.endsWith("/complete-catalogue/")) {
       logEvent(analytics, "site_visit", { source: "home_page" });
       runTransaction(ref(db, "crochet_stats/crochet_visits"), n => (n || 0) + 1);
     }
